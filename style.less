@@ -1,0 +1,416 @@
+@import "mixins.less";
+@import "variables.less";
+
+/*
+*    RESET
+*/
+body,div,header,footer, p, a, img, span, nav, ul, li{
+    margin:0;
+    padding:0;
+}
+
+/*
+*    MAIN
+*/
+#ContainerHeader {
+    .background_gradient(#eb9e04,#e8b113);
+    box-shadow: inset 0px -6px 8px -3px rgba(0,0,0,0.26);
+}
+
+.WrapperHeader {
+    margin: 0px auto;
+    padding:15px 0 30px 0;
+    max-width:1020px;
+    height: 100%;  
+}
+
+/*
+*    HEADER
+*/
+header {
+    display:block;
+    height:80px;
+        
+    .logo_container {
+        display:block;
+        float:left;
+            
+        .logo_icon {
+            position:relative;
+            display:block;
+            float:left;
+            overflow:hidden;
+            padding:14px 5px 0px 80px;
+            height:80px;
+            background-image: url(images/THEYALOW-тАУ-Website-Template---cssauthor_03.png);
+            background-repeat:no-repeat;
+            color: white;
+            text-decoration: none;
+            text-shadow: 0 2px 0 #895d03;
+            font-style: italic;
+            font-size: 41px;
+            font-family: 'Lucida Sans';
+        }
+    }
+    span {
+        display: block;
+        float:left;
+        padding-top:40px;
+        color: white;
+        font-weight:normal;
+        font-size: 13px;
+        font-family: 'Lao UI';
+    }
+    nav {
+        display: block;
+        float: right;
+        overflow: hidden;
+        margin-top: 10px;
+        box-shadow: -5px -5px rgba(240,177,5, 0.27), -10px -10px rgba(240,177,5, 0.27);
+        line-height: 30px;
+
+        a {
+            display: block;
+            float: right;
+            margin: 0;
+            padding: 5px 20px;
+            border-right: 1px solid #dcb105;
+            background-color:@HeaderNavColor ;
+            color: #9b7d08;
+            text-decoration: none;
+            font-size: 17px;
+            font-family:'Segoe WP','Segoe UI',sans-serif;
+
+            &:first-child {
+                border: none;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            & i {
+                padding-right:5px;
+                font-size:20px;
+            }
+        }
+    }
+}
+
+/*
+*   VIDEO CAROUSEL
+*/
+.VideoCarousel {
+    display: block;
+
+    .VideoWrapper {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        .VideoCaption {
+            display: block;
+            float: right;
+            margin-top: 90px;
+            width: 50%;
+            text-align: center;
+            font-size: 43px;
+            font-weight:400;
+            font-family: 'Asap','Asap-Regular','Lucida Sans';
+
+            h2 {
+                color: #f5c506;
+                text-transform: uppercase;
+
+                .white {
+                    color: white;
+                }
+            }
+        }
+
+        .VideoPlayer {
+            width: 50%;
+
+            video {
+                width:100%;
+            }
+        }
+    }
+
+    a.left {
+        position: absolute;
+        top: 40%;
+        left: 0;
+        float: left;
+        margin-top: -15px;
+        width: 32px;
+        height: 57px;
+        background-image: url("images/THEYALOW – Website Template - cssauthor_02.png");
+        background-repeat: no-repeat;
+    }
+
+    a.right {
+        position: absolute;
+        top: 40%;
+        right: 0;
+        right: 0px;
+        float: right;
+        margin-top: -15px;
+        width: 32px;
+        height: 57px;
+        background-image: url("images/THEYALOW – Website Template - cssauthor_03.png");
+        background-repeat: no-repeat;
+    }
+}
+/*
+*   SITE FEATHURES INFO
+*/
+#ContainerSiteInfo {
+    background-image: url(images/THEYALOW-тАУ-Website-Template---cssauthor_0333.png); 
+}
+
+.WrapperInfo {
+    margin: 0px auto;
+    max-width: 1020px;
+    height: 210px;
+    display: block;
+    position: relative;
+    overflow:hidden;
+    text-align: center;
+
+    .IconInfo {
+        width: 33%;
+        height: 100%;
+        display: block;
+        float: left;
+        margin-left: auto;
+        margin-right: auto;
+        border-right: 1px solid #d1d1d1;
+        padding-top:30px;
+
+        &:first-child {
+            border-left: 1px solid #d1d1d1;
+        }
+
+        h3 {
+            font-size: 27px;
+            text-transform: uppercase;
+            font-family:'SegoeWP-Light','Segoe WP','Segoe UI',sans-serif;
+            font-weight: lighter;
+            margin: 0;
+            img {
+            }
+        }
+    }
+}
+
+/*
+*   HORIZONTAL SLIDER
+*/
+#ContainerSlider {
+    background-image: url(images/bgbloack_3_01.png);
+    box-shadow: inset 0px 4px 4px -2px rgba(0,0,0,0.26);
+}
+
+.WrapperSlider {
+    margin: 0px auto;
+    max-width: 1020px;
+    height: 505px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    h1 {
+        color: white;
+        font-size: 37px;
+        text-transform: uppercase;
+        font-family: 'PT Sans','PT_Sans-Web-Regular','Lucida Sans';
+    }
+
+    .VideoShare {
+        height: 320px;
+        display: block;
+        float: left;
+        position: relative;
+
+        .post {
+            width: 650px;
+            float: left;
+            margin-right: 32px;
+            overflow:hidden;
+
+            .VideoInfo {
+                width: 50%;
+                display: inline-block;
+                position: relative;
+                background-color: #ec9e03;
+
+                p {
+                    padding: 25px;
+                    white-space: normal;
+                    font-size: 29px;
+                    color: white;
+                    font-family: 'SegoeWP-Light','Segoe WP','Segoe UI',Segoe,sans-serif;
+                }
+            }
+
+            .VideoPlayer {
+                height: 100%;
+                display: inline-block;
+                width: 50%;
+
+                video {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+
+
+    .SocialShare {
+        padding:30px;
+        margin-right: 5px;
+        width: 270px;
+        height: 160px;
+        background-color: #ec9e03;
+        display: block;
+        float: left;
+
+        img {
+            margin: 0px auto;
+        }
+    }
+}
+
+/*
+*   SCROLLBAR STYLE
+*/
+.ScrollbarStyle {
+    /* Scrolbar */
+    &::-webkit-scrollbar {
+        width: 14px;
+    }
+ 
+/* Track */
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+    }
+ 
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: #ec9e03; 
+    }
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background-color:rgba(255,255,255,0.5)
+    }
+    /* Inactive */
+    &::-webkit-scrollbar-thumb:window-inactive {
+	    background: rgba(236,158,3,0.4); 
+    }
+}
+
+
+/*
+*    MEDIA
+*/
+@media screen and (max-width: 1020px){
+
+.WrapperHeader {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height:auto;
+    header {
+        height:auto;
+        .background_gradient(#626262,#464646);
+        .logo_container {
+            display: block;
+            padding: 10px;
+            .logo_icon {
+                float: none;
+                display:block;
+                margin-top: 0;
+                padding-right: 5px;
+                padding-left: 45px;
+                height: 27px;
+                background-image: url(images/THEYALOW-тАУ-Mobile-Version---cssauthor_03.png);
+                background-repeat: no-repeat;
+                font-weight: normal;
+                font-size: 19px;
+            }
+        }
+        span {
+            display: none;
+        }
+        nav {
+            margin-top: 0;
+            overflow:hidden;
+            box-shadow: none;
+            line-height: 50px;
+            float: none;
+            a {
+                padding: 5px 15px;
+                background-image: url(images/THEYALOW-тАУ-Mobile-Version---cssauthor_033.png);
+                font-size: 19px;
+            }
+        }
+    }
+
+    a.left {
+        display: none;
+    }
+    a.right {
+        display: none;
+    }
+}
+
+.VideoCarousel {
+    width:100%;
+    .VideoWrapper {
+        width:100%;
+        height:100%;
+        .VideoPlayer {
+            margin:0 auto;
+            max-width:800px;
+            width:100%;
+            position: relative;
+            padding-bottom: 71%;
+            padding-top: 30px; 
+            height: 0; 
+            video, object  {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .VideoCaption {
+            display: none;
+        }
+    }
+}
+
+.WrapperInfo {
+    height: 160px;
+
+    .IconInfo {
+        padding-top: 20px;
+        border: none;
+
+        img {
+            height:75px;
+        }
+
+        h3 {
+            font-size: 23px;
+        }
+    }
+}
+}
+    
